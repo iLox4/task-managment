@@ -8,6 +8,7 @@ const TaskCard = styled.div`
   margin: 5px 0px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px;
 
   h4 {
@@ -18,6 +19,7 @@ const TaskCard = styled.div`
 const TaskInfo = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 
   p {
     display: inline;
