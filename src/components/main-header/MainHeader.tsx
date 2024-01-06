@@ -27,12 +27,12 @@ const StyledHeader = styled.header`
   }
 `;
 
-export default function MainHeader({ title }: { title: string }) {
+export default function MainHeader({ title, openModal }: { title: string; openModal: () => void }) {
   //const todayDate = new Date().toLocaleDateString();
   return (
     <StyledHeader>
       <h1>{title}</h1>
-      <button>+Add</button>
+      <button onClick={openModal}>+Add</button>
     </StyledHeader>
   );
 }
