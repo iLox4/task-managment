@@ -2,31 +2,31 @@ export const DUMMY_TASKS = [
     {
         id: '23',
         title: "Get app done",
-        deadline: "03/01/2024",
-        importance: "crucial"
+        deadline: "2024-01-03",
+        categoryId: "22"
     },
     {
         id: '24',
         title: "Clean flat",
-        deadline: "02/01/2024",
-        importance: "important"
+        deadline: "2024-01-18",
+        categoryId: "25"
     },
     {
         id: '25',
         title: "Go running",
-        deadline: "02/01/2024",
-        importance: "normal"
+        deadline: "2024-02-03",
+        categoryId: "22"
     },
     {
         id: '26',
         title: "Study English",
-        deadline: "02/01/2024",
-        importance: "crucial"
+        deadline: "2024-02-10",
+        categoryId: "22"
     },
     {
         id: '27',
         title: "Duolingo",
-        deadline: "02/01/2024",
-        importance: "low"
+        deadline: "2024-01-20",
+        categoryId: "22"
     },
 ]

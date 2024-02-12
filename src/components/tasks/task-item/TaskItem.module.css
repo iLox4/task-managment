@@ -1,0 +1,38 @@
+.task {
+  width: 100%;
+  border: 1px transparent solid;
+  border-radius: 4px;
+  background-color: #3f3f3f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.task > h4 {
+  cursor: pointer;
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.taskInfo + p {
+  display: inline;
+}
+
+.button {
+  border: 1px transparent solid;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #626262;
+}
+
+.button:hover {
+  background-color: #737373;
+}

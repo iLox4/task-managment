@@ -1,63 +1,37 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import { ModalFormContext } from "../../../store/modal-form-context";
 
-const TaskCard = styled.div`
-  width: 100%;
-  border: 1px transparent solid;
-  border-radius: 4px;
-  background-color: #3f3f3f;
-  margin: 5px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
+import styles from "./TaskItem.module.css";
 
-  h4 {
-    cursor: pointer;
-  }
-`;
-
-const TaskInfo = styled.div`
-  display: flex;
-  gap: 20px;
-  align-items: center;
-
-  p {
-    display: inline;
-  }
-`;
-
-const EditBtn = styled.button`
-  border: 1px transparent solid;
-  border-radius: 8px;
-  cursor: pointer;
-  padding: 5px 10px;
-  background-color: #626262;
-
-  &:hover {
-    background-color: #737373;
-  }
-`;
+import { Task } from "../../../store/task-context";
 
 export default function TaskItem({
-  title,
-  deadline,
+  color,
+  task,
   onDelete,
-  onEdit,
 }: {
-  title: string;
-  deadline: string;
+  color: string;
+  task: Task;
   onDelete: () => void;
-  onEdit: () => void;
 }) {
+  const { openFormModal } = useContext(ModalFormContext);
+  const { title, deadline } = task;
   const deadlineDate = new Date(deadline).toLocaleDateString();
 
+  const backgroundColor = color + "20";
+
   return (
-    <TaskCard>
+    <div className={styles.task} style={{ backgroundColor }}>
       <h4 onClick={onDelete}>{title}</h4>
-      <TaskInfo>
+      <div className={styles.taskInfo}>
         <p>Deadline - {deadlineDate}</p>
-        <EditBtn onClick={onEdit}>edit</EditBtn>
-      </TaskInfo>
-    </TaskCard>
+        <button
+          className={styles.button}
+          onClick={() => openFormModal({ type: "task", task, category: null })}
+        >
+          edit
+        </button>
+      </div>
+    </div>
   );
 }

@@ -1,0 +1,32 @@
+.header {
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header + h1 {
+  display: inline;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.button {
+  border: 1px transparent solid;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 7px 12px;
+  background-color: #626262;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #737373;
+}
